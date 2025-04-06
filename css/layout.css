@@ -1,0 +1,51 @@
+/* filepath: /home/keishi/Code/PPA-Porfolio/css/layout.css */
+/* Layout structures, section containers */
+
+section {
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  padding-top: 10rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.section-container {
+  display: flex;
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+  color: var(--blue);
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Common layout elements */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  filter: brightness(0.9) invert(0.8);
+}

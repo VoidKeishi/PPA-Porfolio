@@ -1,0 +1,32 @@
+/* filepath: /home/keishi/Code/PPA-Porfolio/css/home.css */
+/* Home page specific styles */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+/* HOME TERMINAL SPECIFIC */
+.home-terminal {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 15vh !important; /* Increased padding to avoid header overlap */
+  margin: 0 auto; 
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 90% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  align-items: center !important;
+}

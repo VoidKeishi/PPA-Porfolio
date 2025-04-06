@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience | Keishi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/mediaquerries.css" />
+    <link rel="stylesheet" href="./css/color.css" />
+    <!-- Add Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <!-- Add 3D-Force-Graph for background -->
+    <script src="https://unpkg.com/3d-force-graph@1.70.5/dist/3d-force-graph.min.js"></script>
+    <!-- Add AOS animation library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  </head>
+  <body>
+    <!-- 3D Background Canvas -->
+    <div id="background-canvas-container"></div>
+    
+    <!-- Navigation Bar (Compact version) -->
+    <nav id="desktop-nav" class="fixed-nav compact-nav">
+      <div class="logo">Keishi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Mobile Navigation (Compact version) -->
+    <nav id="hamburger-nav" class="fixed-nav compact-nav">
+      <div class="logo">Keishi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="experience-page">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      
+      <!-- Work Experience -->
+      <div class="experience-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="experience-sub-title">Work Experience</h2>
+        <div class="work-experience">
+          <div class="job-card" data-aos="fade-right" data-aos-delay="200">
+            <div class="job-header">
+              <h3>Teaching Assistant</h3>
+              <span class="job-date">Oct - Dec 2024</span>
+            </div>
+            <h4 class="job-company">Object-Oriented Programming Course</h4>
+            <p class="job-description">
+              Assisted professors in teaching object-oriented programming concepts to undergraduate students.
+            </p>
+            <ul class="job-accomplishments">
+              <li>Developed quizzes to help instructors assess student understanding of OOP concepts</li>
+              <li>Guided student mini-projects with continuous feedback</li>
+              <li>Assisted in grading sections of the final exam</li>
+              <li>Designed and conducted a lab to teach students about Git release flow</li>
+            </ul>
+          </div>
+          
+          <div class="job-card" data-aos="fade-left" data-aos-delay="300">
+            <div class="job-header">
+              <h3>System Engineer Talent</h3>
+              <span class="job-date">May - Nov 2024</span>
+            </div>
+            <h4 class="job-company">Viettel Aerospace</h4>
+            <p class="job-description">
+              Selected for the Viettel Digital Talent 2024 program and worked on high-performance systems.
+            </p>
+            <ul class="job-accomplishments">
+              <li>Phase 1: Completed 3 months of intensive training in high-performance system programming</li>
+              <li>Phase 2: Developed a person-search service that stores and filters high-quality facial images</li>
+              <li>Integrated Kafka for event-driven data flow and Milvus for efficient retrieval</li>
+              <li>Gained experience in distributed systems and concurrent programming</li>
+            </ul>
+          </div>
+
+          <div class="job-card" data-aos="fade-right" data-aos-delay="400">
+            <div class="job-header">
+              <h3>AI R&D Intern</h3>
+              <span class="job-date">Aug - Nov 2023</span>
+            </div>
+            <h4 class="job-company">Sun* Vietnam</h4>
+            <p class="job-description">
+              Worked on research and development projects focusing on voice conversion models.
+            </p>
+            <ul class="job-accomplishments">
+              <li>Fine-tuned the SoftVC VITS Singing Voice Conversion model to improve voice conversion quality</li>
+              <li>Built a high-quality podcast audio dataset for training and evaluation</li>
+              <li>Gained experience in dataset curation and model fine-tuning</li>
+              <li>Applied Vietnamese language processing in AI systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Technical Skills -->
+      <div class="experience-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="experience-sub-title">Technical Skills</h2>
+        
+        <div class="skills-container">
+          <!-- Programming Languages -->
+          <div class="skills-category" data-aos="fade-right" data-aos-delay="200">
+            <h3>Programming Languages</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-name">C/C++</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%"></div>
+                </div>
+                <div class="skill-percent">90%</div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-name">Python</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%"></div>
+                </div>
+                <div class="skill-percent">80%</div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 75%"></div>
+                </div>
+                <div class="skill-percent">75%</div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-name">QML</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%"></div>
+                </div>
+                <div class="skill-percent">70%</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Technologies & Tools -->
+          <div class="skills-category" data-aos="fade-left" data-aos-delay="200">
+            <h3>Technologies & Tools</h3>
+            <div class="tech-grid">
+              <div class="tech-item" data-tech="Qt">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">Qt</span>
+                </div>
+                <div class="tech-name">Qt Framework</div>
+              </div>
+              
+              <div class="tech-item" data-tech="Git">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">Git</span>
+                </div>
+                <div class="tech-name">Git</div>
+              </div>
+              
+              <div class="tech-item" data-tech="Jira">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">Jira</span>
+                </div>
+                <div class="tech-name">Jira</div>
+              </div>
+              
+              <div class="tech-item" data-tech="Docker">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">Docker</span>
+                </div>
+                <div class="tech-name">Docker</div>
+              </div>
+              
+              <div class="tech-item" data-tech="UML">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">UML</span>
+                </div>
+                <div class="tech-name">Astah UML</div>
+              </div>
+
+              <div class="tech-item" data-tech="Linux">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">Linux</span>
+                </div>
+                <div class="tech-name">Linux</div>
+              </div>
+
+              <div class="tech-item" data-tech="Kafka">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">Kafka</span>
+                </div>
+                <div class="tech-name">Kafka</div>
+              </div>
+
+              <div class="tech-item" data-tech="ML">
+                <div class="tech-icon">
+                  <span class="tech-placeholder">ML</span>
+                </div>
+                <div class="tech-name">Machine Learning</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projects Section -->
+      <div class="experience-section" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="experience-sub-title">Projects</h2>
+        
+        <div class="projects-container">
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-img-container">
+              <div class="project-img-placeholder">
+                <span>Socket Chatter</span>
+              </div>
+            </div>
+            <h3 class="project-title">Socket Chatter</h3>
+            <p class="project-description">
+              A LAN-based real-time messaging app supporting text, images, and video. Utilizes Qt's signal-slot mechanism for asynchronous communication between components.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Qt</span>
+              <span class="tech-tag">QML</span>
+              <span class="tech-tag">Networking</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="window.open('https://github.com/VoidKeishi/SocketChatter', '_blank')">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                      onclick="window.open('#', '_blank')">
+                Demo
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="project-img-container">
+              <div class="project-img-placeholder">
+                <span>TSP-GA</span>
+              </div>
+            </div>
+            <h3 class="project-title">TSP-GA (Traveling Salesman Problem)</h3>
+            <p class="project-description">
+              Led a team to design a genetic algorithm for solving the Traveling Salesman Problem with an interactive JavaFX-based user interface to visualize the optimization process.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">JavaFX</span>
+              <span class="tech-tag">Astah UML</span>
+              <span class="tech-tag">Genetic Algorithms</span>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" 
+                      onclick="window.open('https://github.com/VoidKeishi/TSP-GA', '_blank')">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                      onclick="window.open('#', '_blank')">
+                Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Project placeholder for future projects -->
+          <div class="project-card project-coming-soon" data-aos="zoom-in" data-aos-delay="600">
+            <div class="project-img-container">
+              <div class="project-img-placeholder coming-soon">
+                <span>Coming Soon</span>
+              </div>
+            </div>
+            <h3 class="project-title">Future Project</h3>
+            <p class="project-description">
+              More exciting projects coming soon. Stay tuned for updates!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/background.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/experience-page.js"></script>
+  </body>
+</html>
