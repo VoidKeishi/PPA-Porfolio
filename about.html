@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Keishi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/mediaquerries.css" />
+    <link rel="stylesheet" href="./css/color.css" />
+    <!-- Add Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <!-- Add 3D-Force-Graph for background -->
+    <script src="https://unpkg.com/3d-force-graph@1.70.5/dist/3d-force-graph.min.js"></script>
+    <!-- Add AOS (Animate On Scroll) for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- 3D Background Canvas -->
+    <div id="background-canvas-container"></div>
+    
+    <!-- Navigation Bar (Compact version) -->
+    <nav id="desktop-nav" class="fixed-nav compact-nav">
+      <div class="logo">Keishi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Mobile Navigation (Compact version) -->
+    <nav id="hamburger-nav" class="fixed-nav compact-nav">
+      <div class="logo">Keishi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="about-page">
+      <div class="about-header" data-aos="fade-down">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+      </div>
+      
+      <div class="section-container">
+        <!-- Top Section: Avatar and Bio Side-by-Side -->
+        <div class="about-top-section">
+          <!-- Avatar Container with Interactive Elements -->
+          <div class="avatar-container" data-aos="fade-right" data-aos-delay="200">
+            <div class="avatar-frame">
+              <div class="avatar-placeholder">
+                <img src="./assets/images/about-pic.jpg" alt="Profile picture" class="about-pic" />
+                <div class="avatar-overlay">
+                  <div class="avatar-icons">
+                    <div class="avatar-icon" title="C++ Developer">💻</div>
+                    <div class="avatar-icon" title="Parallel Computing Expert">⚙️</div>
+                    <div class="avatar-icon" title="Linux Enthusiast">🐧</div>
+                    <div class="avatar-icon" title="Teaching Assistant">📚</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bio Section -->
+          <div class="bio-section" data-aos="fade-left" data-aos-delay="300">
+            <h3 class="bio-title">Who I am</h3>
+            <div class="text-container">
+              <p class="bio-text">
+                I'm a fourth-year Information Technology student at Hanoi University of Science and Technology with a strong foundation in C++ programming, 
+                object-oriented design, and developing scalable software systems.
+              </p>
+              <p class="bio-text">
+                I specialize in developing applications using parallel computing with experience in multi-threading and GPU design. I'm proficient in tools such as Git, JIRA, 
+                and UML modeling, with hands-on experience in professional office environments, following release flow processes.
+              </p>
+              <div class="quote-container">
+                <p class="quote-text">
+                  The first principle is that you must not fool yourself—and you are the easiest person to fool.
+                </p>
+                <p class="quote-author">— Richard Feynman, <span class="quote-note">my idol in physics and learning</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <!-- Education and Fun Facts Section -->
+        <div class="education-fun-facts-section">
+          <!-- Education Section -->
+          <div class="education-section" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="section-title">Education</h3>
+            <div class="education-container">
+              <div class="education-card" data-aos="flip-up" data-aos-delay="200">
+                <div class="education-header">
+                  <img src="./assets/images/education.png" alt="Education icon" class="icon" />
+                  <h3>Hanoi University of Science and Technology</h3>
+                </div>
+                <div class="education-details">
+                  <div class="detail-item">
+                    <span class="detail-label">Degree:</span>
+                    <span class="detail-value">BSc in Information Technology</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Duration:</span>
+                    <span class="detail-value">2021 - Present</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">CPA:</span>
+                    <span class="detail-value">3.4/4.0</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Key Courses:</span>
+                    <span class="detail-value">OOP (A+), DSA (A), UI-UX (A), Compiler Construction (A)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fun Facts Terminal - Now next to education section -->
+          <div class="fun-facts-section" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="section-title">Fun Facts</h3>
+            <div class="fun-facts-container">
+              <div class="mini-terminal">
+                <div class="mini-terminal-header">
+                  <div class="terminal-buttons">
+                    <span class="terminal-button terminal-close"></span>
+                    <span class="terminal-button terminal-minimize"></span>
+                    <span class="terminal-button terminal-maximize"></span>
+                  </div>
+                  <div class="terminal-title">fun-facts.sh</div>
+                </div>
+                <div class="mini-terminal-content">
+                  <p class="fun-fact">$ <span class="fun-fact-text">TOEIC Listening and Reading: 905/990</span></p>
+                  <p class="fun-fact">$ <span class="fun-fact-text">SAMSUNG Scholarship Recipient</span></p>
+                  <p class="fun-fact">$ <span class="fun-fact-text">Comfortable with Ubuntu & Arch Linux</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <!-- Main Content Grid: Tech Interests and Timeline -->
+        <div class="main-content-grid">
+          <!-- Tech Interests Section -->
+          <div class="content-section" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="interests-title">Tech Interests</h3>
+            <div class="interests-grid">
+              <div class="interest-item">
+                <div class="interest-icon">💻</div>
+                <div class="interest-text">C++ Development</div>
+              </div>
+              <div class="interest-item">
+                <div class="interest-icon">📐</div>
+                <div class="interest-text">Software Architecture</div>
+              </div>
+              <div class="interest-item">
+                <div class="interest-icon">🐧</div>
+                <div class="interest-text">Linux Systems</div>
+              </div>
+              <div class="interest-item">
+                <div class="interest-icon">⚙️</div>
+                <div class="interest-text">System Engineering</div>
+              </div>
+              <div class="interest-item">
+                <div class="interest-icon">🧠</div>
+                <div class="interest-text">AI & ML</div>
+              </div>
+              <div class="interest-item">
+                <div class="interest-icon">🧮</div>
+                <div class="interest-text">Parallel Computing</div>
+              </div>
+            </div>
+          </div>
+              
+          <!-- Career Journey Timeline -->
+          <div class="content-section" data-aos="fade-up" data-aos-delay="400">
+            <h3 class="journey-title">My Academic Journey</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>2021</h4>
+                  <p>Started Information Technology degree at Hanoi University of Science and Technology</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>2022</h4>
+                  <p>Completed foundational courses with excellent grades in programming fundamentals</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>2023</h4>
+                  <p>Received SAMSUNG Scholarship for academic excellence</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>2024</h4>
+                  <p>Focusing on advanced topics in parallel computing and system design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="./js/background.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/about-page.js"></script>
+  </body>
+</html>

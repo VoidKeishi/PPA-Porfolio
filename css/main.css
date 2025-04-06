@@ -1,0 +1,24 @@
+/* filepath: /home/keishi/Code/PPA-Porfolio/css/main.css */
+/* Main CSS file to import all other stylesheets */
+
+/* Import variables */
+@import "color.css";
+
+/* Import base styles */
+@import "base.css";
+@import "layout.css";
+@import "nav.css";
+
+/* Import components */
+@import "terminal.css";
+@import "components.css";
+@import "animations.css";
+
+/* Import page-specific styles */
+@import "home.css";
+@import "about.css";
+@import "experience.css";
+@import "contact.css";
+
+/* Import media queries (always last) */
+@import "mediaquerries.css";

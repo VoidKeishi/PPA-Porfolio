@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Keishi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/mediaquerries.css" />
+    <link rel="stylesheet" href="./css/color.css" />
+    <!-- Add Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <!-- Add 3D-Force-Graph for background -->
+    <script src="https://unpkg.com/3d-force-graph@1.70.5/dist/3d-force-graph.min.js"></script>
+    <!-- Add AOS (Animate On Scroll) for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- 3D Background Canvas -->
+    <div id="background-canvas-container"></div>
+    
+    <!-- Navigation Bar (Compact version) -->
+    <nav id="desktop-nav" class="fixed-nav compact-nav">
+      <div class="logo">Keishi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Mobile Navigation (Compact version) -->
+    <nav id="hamburger-nav" class="fixed-nav compact-nav">
+      <div class="logo">Keishi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="contact-page">
+      <div class="contact-header" data-aos="fade-down">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <p class="contact-subtitle">Let's connect and discuss your project or opportunity.</p>
+      </div>
+      
+      <div class="contact-main-container">
+        <!-- Left Section: Contact Cards -->
+        <div class="contact-left-section" data-aos="fade-right" data-aos-delay="200">
+          <h2 class="contact-section-title">Connect With Me</h2>
+          
+          <!-- Contact Cards with Hover Effects -->
+          <div class="contact-cards-container">
+            <!-- Email Contact Card -->
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="contact-card-content">
+                <div class="contact-icon-container">
+                  <img src="./assets/images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                </div>
+                <h3>Email</h3>
+                <p class="contact-detail">
+                  <a href="mailto:phananha4@gmail.com" class="highlight-link">phananha4@gmail.com</a>
+                </p>
+                <p class="contact-description">Feel free to email me about any questions or opportunities.</p>
+              </div>
+              <div class="contact-card-action">
+                <a href="mailto:phananha4@gmail.com" class="contact-action-btn">Send Email</a>
+              </div>
+            </div>
+            
+            <!-- LinkedIn Contact Card -->
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="contact-card-content">
+                <div class="contact-icon-container">
+                  <img src="./assets/images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                </div>
+                <h3>LinkedIn</h3>
+                <p class="contact-detail">
+                  <a href="https://linkedin.com/in/voidkeishi314/" target="_blank" class="highlight-link">in/voidkeishi314</a>
+                </p>
+                <p class="contact-description">Connect with me professionally and stay updated with my career.</p>
+              </div>
+              <div class="contact-card-action">
+                <a href="https://linkedin.com/in/voidkeishi314/" target="_blank" class="contact-action-btn">Connect</a>
+              </div>
+            </div>
+            
+            <!-- GitHub Contact Card -->
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="500">
+              <div class="contact-card-content">
+                <div class="contact-icon-container">
+                  <img src="./assets/images/github.png" alt="GitHub icon" class="icon contact-icon" />
+                </div>
+                <h3>GitHub</h3>
+                <p class="contact-detail">
+                  <a href="https://github.com/VoidKeishi" target="_blank" class="highlight-link">github.com/VoidKeishi</a>
+                </p>
+                <p class="contact-description">Check out my projects and contributions on GitHub.</p>
+              </div>
+              <div class="contact-card-action">
+                <a href="https://github.com/VoidKeishi" target="_blank" class="contact-action-btn">View Profile</a>
+              </div>
+            </div>
+            
+            <!-- Facebook Contact Card -->
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="600">
+              <div class="contact-card-content">
+                <div class="contact-icon-container">
+                  <img src="./assets/images/facebook.png" alt="Facebook icon" class="icon contact-icon" />
+                </div>
+                <h3>Facebook</h3>
+                <p class="contact-detail">
+                  <a href="https://www.facebook.com/nerdy.keishi/" target="_blank" class="highlight-link">nerdy.keishi</a>
+                </p>
+                <p class="contact-description">Follow me on social media for more casual updates.</p>
+              </div>
+              <div class="contact-card-action">
+                <a href="https://www.facebook.com/nerdy.keishi/" target="_blank" class="contact-action-btn">Follow</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="availability-container" data-aos="fade-up" data-aos-delay="700">
+            <div class="availability-status">
+              <div class="status-indicator available"></div>
+              <p>Currently available for freelance work and collaboration</p>
+            </div>
+            <p class="response-time">Average response time: <span>24 hours</span></p>
+          </div>
+        </div>
+        
+        <!-- Right Section: Contact Form -->
+        <div class="contact-right-section" data-aos="fade-left" data-aos-delay="400">
+          <div class="contact-form-wrapper">
+            <div class="contact-form-header">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span class="terminal-button terminal-close"></span>
+                  <span class="terminal-button terminal-minimize"></span>
+                  <span class="terminal-button terminal-maximize"></span>
+                </div>
+                <div class="terminal-title">message.js</div>
+              </div>
+            </div>
+            
+            <div class="contact-form-container">
+              <h2>Send a Message</h2>
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-submit-container">
+                  <button type="submit" class="btn btn-color-1">Send Message</button>
+                  <div class="form-submit-animation"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+          <!-- Terminal-style response message for form submission -->
+          <div class="terminal-response" id="form-response">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="terminal-button terminal-close"></span>
+                <span class="terminal-button terminal-minimize"></span>
+                <span class="terminal-button terminal-maximize"></span>
+              </div>
+              <div class="terminal-title">message@terminal:~</div>
+            </div>
+            <div class="terminal-content">
+              <div class="terminal-prompt">
+                <span class="terminal-user">message</span>
+                <span class="terminal-at">@</span>
+                <span class="terminal-machine">keishi</span>
+                <span class="terminal-path">:~</span>
+                <span class="terminal-symbol">$</span>
+                <span class="terminal-command">send</span>
+              </div>
+              <div class="terminal-output" id="form-response-message">
+                <!-- Will be filled by JS -->
+              </div>
+              <div class="terminal-prompt">
+                <span class="terminal-user">message</span>
+                <span class="terminal-at">@</span>
+                <span class="terminal-machine">keishi</span>
+                <span class="terminal-path">:~</span>
+                <span class="terminal-symbol">$</span>
+                <span class="cursor-blink">█</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional Contact Info Section -->
+      <div class="additional-info" data-aos="fade-up" data-aos-delay="800">
+        <div class="info-card">
+          <h3>Preferred Contact Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM (UTC+7)</p>
+          <p>Weekend: Available for urgent matters</p>
+        </div>
+        
+        <div class="info-card">
+          <h3>Current Location</h3>
+          <p>Hanoi, Vietnam</p>
+          <p>Available for remote work worldwide</p>
+        </div>
+      </div>
+    </section>
+    
+    <script src="./js/background.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/contact-page.js"></script>
+  </body>
+</html>

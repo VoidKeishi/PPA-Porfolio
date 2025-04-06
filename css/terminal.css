@@ -1,0 +1,296 @@
+/* filepath: /home/keishi/Code/PPA-Porfolio/css/terminal.css */
+/* Terminal styles for all terminal components used across the site */
+
+/* Terminal Focus Section */
+.terminal-focus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  padding-top: 15vh;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Terminal Container */
+.terminal-container {
+  background-color: var(--mantle);
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  color: var(--green);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 900px;
+  border: 1px solid var(--surface1);
+  min-height: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Neofetch-style terminal */
+.terminal-container.neofetch-style {
+  background-color: rgba(30, 30, 46, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--overlay0);
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+}
+
+/* Terminal Header */
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #191a21;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #44475a;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.terminal-title {
+  font-weight: 500;
+  color: var(--subtext0);
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+}
+
+.terminal-header.hide-title .terminal-title {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-close {
+  background-color: var(--red);
+}
+
+.terminal-minimize {
+  background-color: var(--yellow);
+}
+
+.terminal-maximize {
+  background-color: var(--green);
+}
+
+/* Terminal Content */
+.terminal-content {
+  padding: 1rem;
+  max-height: none;
+  overflow: visible;
+  overflow-y: visible;
+  font-family: 'Monaco', 'Consolas', monospace;
+  color: #f8f8f2;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  height: auto;
+  display: block;
+}
+
+.terminal-prompt {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  gap: 0.3rem;
+}
+
+.terminal-user {
+  color: var(--green);
+  margin-right: 8px;
+}
+
+.terminal-at {
+  color: var(--text);
+  margin-right: 8px;
+}
+
+.terminal-machine {
+  color: var(--mauve);
+  margin-right: 8px;
+}
+
+.terminal-path {
+  color: var(--blue);
+  margin-right: 8px;
+}
+
+.terminal-symbol {
+  color: var(--red);
+  margin-right: 8px;
+}
+
+.terminal-command {
+  color: var(--text);
+}
+
+.terminal-output {
+  margin-bottom: 1rem;
+}
+
+/* Cursor Blinking */
+.cursor-blink {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: var(--text);
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Neofetch Output */
+.neofetch-output {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+}
+
+.neofetch-logo {
+  color: var(--blue);
+  font-size: 0.7rem;
+  line-height: 1.2;
+  margin: 0;
+  white-space: pre;
+  min-width: 300px;
+  max-width: 40%;
+}
+
+.neofetch-info {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.info-title {
+  color: var(--lavender);
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+/* Whoami Section */
+.whoami-section {
+  padding: 1.5rem;
+  margin: 1rem 0 3rem 0;
+  background-color: transparent !important;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.whoami-section p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.personal-intro {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--green);
+  line-height: 1.8;
+}
+
+.definition {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #f1fa8c;
+  font-style: italic;
+}
+
+.highlight-definition {
+  color: var(--mauve);
+  font-weight: 500;
+}
+
+/* Navigation Options */
+.nav-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.terminal-link {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: rgba(24, 24, 37, 0.4);
+  border: 1px solid #44475a;
+  font-family: 'Fira Code', monospace;
+  transition: all 0.3s ease;
+}
+
+.terminal-link:hover {
+  color: var(--lavender);
+  background-color: rgba(68, 71, 90, 0.6);
+  border-color: #6272a4;
+  text-decoration: underline;
+}
+
+/* Mini Terminal (for About Page) */
+.mini-terminal {
+  background-color: var(--mantle);
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  color: var(--green);
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  overflow: hidden;
+  border: 1px solid var(--surface1);
+}
+
+.mini-terminal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--surface1);
+}
+
+.mini-terminal-content {
+  padding: 1rem;
+  height: 120px;
+  overflow: hidden;
+}
+
+.fun-fact {
+  margin-bottom: 0.7rem;
+  display: flex;
+}
+
+.fun-fact-text {
+  color: var(--text);
+  margin-left: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+/* Terminal Response (for Contact Form) */
+.terminal-response {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: none;
+}

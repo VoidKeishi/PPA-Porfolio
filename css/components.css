@@ -1,0 +1,132 @@
+/* filepath: /home/keishi/Code/PPA-Porfolio/css/components.css */
+/* Reusable components - buttons, cards, etc. */
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: var(--lavender) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: var(--lavender);
+  color: var(--base);
+}
+
+.btn-color-1:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-color-2 {
+  background: none;
+  color: var(--text);
+}
+
+.btn-color-2:hover {
+  border: var(--blue) 0.1rem solid;
+}
+
+/* SOCIAL ICONS */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* Minimal Social Container */
+.minimal-social-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(30, 30, 46, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--overlay0);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-5px);
+  background-color: var(--surface1);
+  border-color: var(--blue);
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  filter: brightness(1);
+  transform: translateY(-3px);
+}
+
+.resume-icon .social-icon {
+  width: 27px;
+  height: 27px;
+}
+
+/* CARDS AND CONTAINERS */
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--surface0);
+  border-radius: 2rem;
+  border: var(--surface1) 0.1rem solid;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* TEXT STYLES */
+.highlight-text {
+  color: var(--lavender);
+  font-style: italic;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  border-left: 3px solid var(--blue);
+  padding-left: 1rem;
+}
+
+.highlight-link {
+  color: var(--lavender);
+  transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
