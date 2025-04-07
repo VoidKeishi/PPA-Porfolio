@@ -32,14 +32,15 @@
   overflow: hidden;
 }
 
-/* Neofetch-style terminal */
+/* Neofetch-style terminal - Modified for better transparency */
 .terminal-container.neofetch-style {
-  background-color: rgba(30, 30, 46, 0.85);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--overlay0);
+  background-color: rgba(24, 24, 37, 0.65); /* More transparent background */
+  border: 1px solid var(--surface0);
   width: 100%;
   max-width: 900px;
   margin: 0;
+  box-shadow: none; /* Removed box-shadow completely */
+  backdrop-filter: none; /* Removed blur effect completely */
 }
 
 /* Terminal Header */
@@ -47,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #191a21;
+  background-color: rgba(25, 26, 33, 0.8); /* Slightly transparent header */
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #44475a;
   width: 100%;

@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/mediaquerries.css" />
     <link rel="stylesheet" href="./css/color.css" />
+    <!-- Add Press Start 2P font for bit-style logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Add Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
@@ -120,102 +124,91 @@
         <h2 class="experience-sub-title">Technical Skills</h2>
         
         <div class="skills-container">
-          <!-- Programming Languages -->
-          <div class="skills-category" data-aos="fade-right" data-aos-delay="200">
-            <h3>Programming Languages</h3>
-            <div class="skills-grid">
-              <div class="skill-item">
-                <div class="skill-name">C/C++</div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%"></div>
+          <!-- Core Expertise Column -->
+          <div class="skills-column">
+            <h3 class="skills-category-title">Core Expertise</h3>
+            <div class="expertise-grid">
+              <div class="expertise-card">
+                <div class="expertise-icon cpp-icon">C++</div>
+                <div class="expertise-content">
+                  <h4>C/C++</h4>
+                  <span class="experience-years">4+ years</span>
+                  <p>System programming, parallel computing, application development with Qt</p>
+                  <div class="expertise-tags">
+                    <span>Person Search Service</span>
+                    <span>Socket Chatter</span>
+                  </div>
                 </div>
-                <div class="skill-percent">90%</div>
               </div>
               
-              <div class="skill-item">
-                <div class="skill-name">Python</div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 80%"></div>
+              <div class="expertise-card">
+                <div class="expertise-icon sys-icon">SYS</div>
+                <div class="expertise-content">
+                  <h4>System Design</h4>
+                  <span class="experience-years">3+ years</span>
+                  <p>Multithreading, distributed systems, high-performance applications</p>
+                  <div class="expertise-tags">
+                    <span>Linux System Tools</span>
+                  </div>
                 </div>
-                <div class="skill-percent">80%</div>
               </div>
-              
-              <div class="skill-item">
-                <div class="skill-name">Java</div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 75%"></div>
+
+              <div class="expertise-card">
+                <div class="expertise-icon oop-icon">OOP</div>
+                <div class="expertise-content">
+                  <h4>Object-Oriented Design</h4>
+                  <span class="experience-years">Advanced</span>
+                  <p>SOLID principles, design patterns, UML modeling</p>
+                  <div class="expertise-tags">
+                    <span>Teaching Assistant</span>
+                  </div>
                 </div>
-                <div class="skill-percent">75%</div>
-              </div>
-              
-              <div class="skill-item">
-                <div class="skill-name">QML</div>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 70%"></div>
-                </div>
-                <div class="skill-percent">70%</div>
               </div>
             </div>
           </div>
           
-          <!-- Technologies & Tools -->
-          <div class="skills-category" data-aos="fade-left" data-aos-delay="200">
-            <h3>Technologies & Tools</h3>
-            <div class="tech-grid">
-              <div class="tech-item" data-tech="Qt">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">Qt</span>
+          <!-- Technologies Column -->
+          <div class="skills-column">
+            <h3 class="skills-category-title">Technologies</h3>
+            <div class="tech-clusters">
+              <div class="tech-cluster">
+                <h4 class="cluster-name">Development</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge primary">C++</span>
+                  <span class="tech-badge primary">Qt</span>
+                  <span class="tech-badge secondary">Python</span>
+                  <span class="tech-badge secondary">Java</span>
+                  <span class="tech-badge secondary">QML</span>
                 </div>
-                <div class="tech-name">Qt Framework</div>
               </div>
               
-              <div class="tech-item" data-tech="Git">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">Git</span>
+              <div class="tech-cluster">
+                <h4 class="cluster-name">Tools & Systems</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge primary">Git</span>
+                  <span class="tech-badge primary">Linux</span>
+                  <span class="tech-badge primary">Multithreading</span>
+                  <span class="tech-badge secondary">Docker</span>
+                  <span class="tech-badge secondary">Kafka</span>
                 </div>
-                <div class="tech-name">Git</div>
               </div>
               
-              <div class="tech-item" data-tech="Jira">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">Jira</span>
+              <div class="tech-cluster">
+                <h4 class="cluster-name">Design & Documentation</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge primary">Design Patterns</span>
+                  <span class="tech-badge secondary">UML</span>
+                  <span class="tech-badge secondary">Jira</span>
                 </div>
-                <div class="tech-name">Jira</div>
               </div>
               
-              <div class="tech-item" data-tech="Docker">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">Docker</span>
+              <div class="tech-cluster">
+                <h4 class="cluster-name">Additional Skills</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge secondary">Machine Learning</span>
+                  <span class="tech-badge secondary">PyTorch</span>
+                  <span class="tech-badge secondary">SQL</span>
                 </div>
-                <div class="tech-name">Docker</div>
-              </div>
-              
-              <div class="tech-item" data-tech="UML">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">UML</span>
-                </div>
-                <div class="tech-name">Astah UML</div>
-              </div>
-
-              <div class="tech-item" data-tech="Linux">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">Linux</span>
-                </div>
-                <div class="tech-name">Linux</div>
-              </div>
-
-              <div class="tech-item" data-tech="Kafka">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">Kafka</span>
-                </div>
-                <div class="tech-name">Kafka</div>
-              </div>
-
-              <div class="tech-item" data-tech="ML">
-                <div class="tech-icon">
-                  <span class="tech-placeholder">ML</span>
-                </div>
-                <div class="tech-name">Machine Learning</div>
               </div>
             </div>
           </div>
@@ -318,7 +311,7 @@
       </div>
     </section>
 
-    <script src="./js/background.js"></script>
+    <script src="./js/graph-background.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/experience-page.js"></script>
     <script src="./js/project-gallery.js"></script>
