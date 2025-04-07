@@ -10,14 +10,14 @@
 }
 
 .experience-section {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem; /* Reduced from 4rem to 2.5rem */
 }
 
 .experience-sub-title {
   color: var(--subtext1);
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Further reduced from 1.5rem to 1rem */
   text-align: center;
 }
 

@@ -9,9 +9,9 @@
 @import "layout.css";
 @import "nav.css";
 
-/* Import components */
-@import "terminal.css";
+/* Import components - make sure components.css is loaded AFTER base styles */
 @import "components.css";
+@import "terminal.css";
 @import "animations.css";
 
 /* Import page-specific styles */
@@ -19,6 +19,7 @@
 @import "about.css";
 @import "experience.css";
 @import "contact.css";
+@import "project-gallery.css";
 
 /* Import media queries (always last) */
 @import "mediaquerries.css";

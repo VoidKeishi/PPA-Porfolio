@@ -16,6 +16,8 @@
     <!-- Add AOS animation library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Add Page icon-->
+    <link rel="icon" href="./assets/images/atom.ico" type="image/x-icon">
   </head>
   <body>
     <!-- 3D Background Canvas -->
@@ -220,78 +222,97 @@
         </div>
       </div>
       
-      <!-- Projects Section -->
+      <!-- Projects Section with Image Track Gallery -->
       <div class="experience-section" data-aos="fade-up" data-aos-duration="800">
         <h2 class="experience-sub-title">Projects</h2>
         
-        <div class="projects-container">
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="project-img-container">
-              <div class="project-img-placeholder">
-                <span>Socket Chatter</span>
+        <!-- Image Track Gallery with proper spacing -->
+        <div class="project-gallery-container" data-aos="fade-up">
+          <div id="project-image-track" data-mouse-down-at="0" data-prev-percentage="0">
+            
+            <!-- Socket Chatter -->
+            <div class="project-image-wrapper">
+              <img class="project-image" src="./assets/images/projects/socketchat.jpg" draggable="false" alt="Socket Chatter" />
+              <div class="project-info-overlay">
+                <h3>Socket Chatter</h3>
+                <p>A LAN-based real-time messaging app supporting text, images, and video.</p>
+                <div class="project-tags">
+                  <span class="project-tag">C++</span>
+                  <span class="project-tag">Qt</span>
+                  <span class="project-tag">QML</span>
+                </div>
               </div>
             </div>
-            <h3 class="project-title">Socket Chatter</h3>
-            <p class="project-description">
-              A LAN-based real-time messaging app supporting text, images, and video. Utilizes Qt's signal-slot mechanism for asynchronous communication between components.
-            </p>
-            <div class="project-tech-stack">
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">Qt</span>
-              <span class="tech-tag">QML</span>
-              <span class="tech-tag">Networking</span>
-            </div>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" 
-                      onclick="window.open('https://github.com/VoidKeishi/SocketChatter', '_blank')">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn"
-                      onclick="window.open('#', '_blank')">
-                Demo
-              </button>
-            </div>
-          </div>
-          
-          <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
-            <div class="project-img-container">
-              <div class="project-img-placeholder">
-                <span>TSP-GA</span>
+            
+            <!-- TSP-GA Project -->
+            <div class="project-image-wrapper">
+              <img class="project-image" src="./assets/images/projects/tspgenetic.png" draggable="false" alt="TSP-GA" />
+              <div class="project-info-overlay">
+                <h3>TSP-GA (Traveling Salesman)</h3>
+                <p>Genetic algorithm for solving the Traveling Salesman Problem with interactive visualization.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Java</span>
+                  <span class="project-tag">JavaFX</span>
+                  <span class="project-tag">Algorithms</span>
+                </div>
               </div>
             </div>
-            <h3 class="project-title">TSP-GA (Traveling Salesman Problem)</h3>
-            <p class="project-description">
-              Led a team to design a genetic algorithm for solving the Traveling Salesman Problem with an interactive JavaFX-based user interface to visualize the optimization process.
-            </p>
-            <div class="project-tech-stack">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">JavaFX</span>
-              <span class="tech-tag">Astah UML</span>
-              <span class="tech-tag">Genetic Algorithms</span>
+            
+            <!-- Voice Conversion -->
+            <div class="project-image-wrapper">
+              <img class="project-image" src="./assets/images/projects/voiceconversion.png" draggable="false" alt="Voice Conversion" />
+              <div class="project-info-overlay">
+                <h3>Voice Conversion Model</h3>
+                <p>Fine-tuned SoftVC VITS model for high-quality voice conversion.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">PyTorch</span>
+                  <span class="project-tag">ML</span>
+                </div>
+              </div>
             </div>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" 
-                      onclick="window.open('https://github.com/VoidKeishi/TSP-GA', '_blank')">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn"
-                      onclick="window.open('#', '_blank')">
-                Demo
-              </button>
+            
+            <!-- Person Search -->
+            <div class="project-image-wrapper">
+              <img class="project-image" src="./assets/images/projects/person-search.jpg" draggable="false" alt="Person Search" />
+              <div class="project-info-overlay">
+                <h3>Person Search Service</h3>
+                <p>High-performance system for storing and filtering facial images.</p>
+                <div class="project-tags">
+                  <span class="project-tag">C++</span>
+                  <span class="project-tag">Kafka</span>
+                  <span class="project-tag">Docker</span>
+                </div>
+              </div>
             </div>
-          </div>
+            
+            <!-- Linux System Tools -->
+            <div class="project-image-wrapper">
+              <img class="project-image" src="./assets/images/projects/placeholder.jpg" draggable="false" alt="Linux Tools" />
+              <div class="project-info-overlay">
+                <h3>Linux System Tools</h3>
+                <p>Collection of system utilities for performance monitoring and optimization.</p>
+                <div class="project-tags">
+                  <span class="project-tag">C</span>
+                  <span class="project-tag">Bash</span>
+                  <span class="project-tag">Linux</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Future Project -->
+            <div class="project-image-wrapper">
+              <img class="project-image" src="./assets/images/projects/comingsoon.png" draggable="false" alt="Coming Soon" />
+              <div class="project-info-overlay">
+                <h3>Future Project</h3>
+                <p>More exciting projects coming soon. Stay tuned!</p>
+                <div class="project-tags">
+                  <span class="project-tag">Coming</span>
+                  <span class="project-tag">Soon</span>
+                </div>
+              </div>
+            </div>
 
-          <!-- Project placeholder for future projects -->
-          <div class="project-card project-coming-soon" data-aos="zoom-in" data-aos-delay="600">
-            <div class="project-img-container">
-              <div class="project-img-placeholder coming-soon">
-                <span>Coming Soon</span>
-              </div>
-            </div>
-            <h3 class="project-title">Future Project</h3>
-            <p class="project-description">
-              More exciting projects coming soon. Stay tuned for updates!
-            </p>
           </div>
         </div>
       </div>
@@ -300,5 +321,6 @@
     <script src="./js/background.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/experience-page.js"></script>
+    <script src="./js/project-gallery.js"></script>
   </body>
 </html>

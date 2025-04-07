@@ -620,66 +620,6 @@ section {
   filter: brightness(0.9) invert(0.8);
 }
 
-/* Minimal Social Container */
-.minimal-social-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.social-icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background-color: rgba(250, 250, 250, 0.85);
-  backdrop-filter: blur(5px);
-  border: 2px solid var(--lavender);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.social-icon-link:hover {
-  transform: translateY(-5px);
-  background-color: var(--blue);
-  border-color: var(--blue);
-}
-
-.social-icon {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0.2) contrast(1.2);
-  transition: all 0.3s ease;
-}
-
-.social-icon-link:hover .social-icon {
-  filter: brightness(2) contrast(1.2);
-}
-
-#email-icon,
-a[href^="mailto:"] .social-icon {
-  width: 50px !important;
-  height: 50px !important;
-}
-
-.social-icon:hover {
-  transform: translateY(-3px);
-}
-
-.resume-icon .social-icon {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0.2) contrast(1.5);
-}
-
-.resume-icon:hover .social-icon {
-  filter: brightness(2) contrast(1.5);
-}
-
 /* ==========================================================================
    BUTTONS
    ========================================================================== */

@@ -1,0 +1,123 @@
+/* filepath: /home/keishi/Code/PPA-Porfolio/css/project-gallery.css */
+/* Project Gallery Image Track Animation */
+
+.project-gallery-container {
+  overflow: hidden;
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 80vh; /* Increased height for more vertical space */
+  margin: 1rem 0 5rem; /* Reduced top margin from 2rem to 1rem */
+  margin-left: calc(-50vw + 50%); /* Extend beyond container width */
+  margin-right: calc(-50vw + 50%); /* Extend beyond container width */
+}
+
+#project-image-track {
+  display: flex;
+  gap: 2vw; /* Reduced gap between project items from 4vw to 2vw */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Start at center */
+  user-select: none; /* Prevent image highlighting */
+  padding: 0 20vw; /* Padding on sides for better appearance */
+}
+
+/* Fix: Use the wrapper to control dimensions with precise spacing */
+.project-image-wrapper {
+  position: relative;
+  width: 35vmin;
+  height: 50vmin;
+  margin: 0 1vmin; /* Small margin for spacing */
+  border-radius: 1.2rem;
+  overflow: hidden; /* Ensure image doesn't overflow the wrapper */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image-wrapper:hover {
+  transform: scale(1.03) translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Fix: Style the image to fit within the wrapper */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Fix: Position the overlay at the bottom of the wrapper */
+.project-info-overlay {
+  position: absolute;
+  bottom: 0; /* Ensure it's at the bottom */
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(24, 24, 37, 0.95) 80%, rgba(24, 24, 37, 0) 100%);
+  color: var(--text);
+  border-radius: 0 0 1.2rem 1.2rem; /* Match the wrapper border-radius */
+  opacity: 0;
+  transform: translateY(20px); /* Start from below for better animation */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10; /* Ensure overlay is above image */
+  min-height: 30%; /* Ensure overlay covers bottom portion of image */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to bottom */
+}
+
+.project-image-wrapper:hover .project-info-overlay {
+  opacity: 1;
+  transform: translateY(0); /* Move up to its correct position */
+}
+
+.project-info-overlay h3 {
+  font-size: 1.2rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.project-info-overlay p {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.project-tag {
+  background-color: rgba(49, 50, 68, 0.7);
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .project-gallery-container {
+    height: 70vh;
+  }
+
+  #project-image-track {
+    gap: 3vw; /* Reduced gap for mobile */
+    padding: 0 15vw; /* Adjusted padding on mobile */
+  }
+
+  .project-image-wrapper {
+    width: 28vmin;
+    height: 40vmin;
+    margin: 0 1.5vmin; /* Reduced margin for mobile */
+  }
+  
+  .project-info-overlay h3 {
+    font-size: 1rem;
+  }
+  
+  .project-info-overlay p {
+    font-size: 0.8rem;
+  }
+}
